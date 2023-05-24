@@ -9,7 +9,7 @@ https://github.com/neovim/neovim<br>
 準備ができたら一度neovimを開き、`:PlugInstall`を実行しよう。
 ### Linux
 aptなどでNeovimをインストールする場合バージョンが低くてプラグインが動かない可能性があるのでgithubからダウンロードした方がいいかも。<br>
-
+いちいちインストールの方法調べるのがだるいので`nvim_setup.sh`つくった。<br>
 `init.vim`を`~/.config/nvim/`へ移動させる。
 
 ### Windows
