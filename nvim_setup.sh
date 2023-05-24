@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install ninja-build gettext cmake unzip curl npm
+sudo apt-get install ninja-build gettext cmake unzip curl npm -y
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
