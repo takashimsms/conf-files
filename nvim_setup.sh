@@ -1,3 +1,5 @@
+cd `dirname $0`
+cd ~
 sudo apt-get update
 sudo apt-get install ninja-build gettext cmake unzip curl npm -y
 git clone https://github.com/neovim/neovim
