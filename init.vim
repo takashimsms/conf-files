@@ -26,7 +26,7 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 " Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+" Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 
 set encoding=UTF-8
@@ -36,7 +36,7 @@ call plug#end()
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+" nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -71,7 +71,7 @@ endif
 " let g:airline_symbols.linenr = ''
 
 
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+" inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 tnoremap <Esc> <C-\><C-n>
 " ターミナル操作系
