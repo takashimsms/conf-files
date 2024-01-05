@@ -7,12 +7,14 @@ https://github.com/neovim/neovim<br>
 - Nerd font : https://github.com/ryanoasis/nerd-fonts 足りないフォントを追加する。UIがいい感じになってモチベが上がる。フォントをダウンロードしたらターミナル側の設定でフォントを変更することを忘れずに。
 
 準備ができたら一度neovimを開き、`:PlugInstall`を実行しよう。
-### Linux
+### Linux(Debian)
 aptなどでNeovimをインストールする場合バージョンが低くてプラグインが動かない可能性があるのでgithubからダウンロードした方がいいかも。<br>
 ~~`init.vim`を`~/.config/nvim/`へ移動させる。~~<br>
 いちいちインストールの方法調べるのがだるいので`nvim_setup.sh`つくった。
 
-
+### Arch Linux
+`yay -S neovim`<br>
+`init.vim`を`~/.config/nvim/`へ移動させる。<br>
 ### Windows
 ダウンロード出来たら`C:\Program file\Neovim\bin\nvim.exe`のパスを通しておく。<br>
 `init.vim`を`%USERPROFILE%\AppData\Local\nvim\`へ移動させる。
