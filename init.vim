@@ -19,14 +19,15 @@ call plug#begin()
 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
+Plug 'https://github.com/cocopon/iceberg.vim'
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/itchyny/lightline.vim' " Status bar
-" Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+" Plug 'https://github.com/itchyny/lightline.vim' " Status bar
+Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 " Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+" Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
+Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 " Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
@@ -56,14 +57,15 @@ hi CocFloating guifg=#c29976 guibg=#001622
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
-" air-line
-let g:airline_powerline_fonts = 1
+" " air-line
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
+" if !exists('g:airline_symbols')
+"     let g:airline_symbols = {}
+" endif
 
-" airline symbols
+" " airline symbols
 " let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_right_sep = ''
@@ -71,21 +73,18 @@ endif
 " let g:airline_symbols.branch = ''
 " let g:airline_symbols.readonly = ''
 " let g:airline_symbols.linenr = ''
-
+" let g:airline_symbols.maxlinenr = '☰ '
+" let g:airline_symbols.dirty='⚡'
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 tnoremap <Esc> <C-\><C-n>
+
 " ターミナル操作系
-" :Tで下にウィンドウを作成しターミナルを表示
-command! -nargs=* T split | wincmd j | terminal <args>
-" :Tvで左にウィンドウを(ry
-command! -nargs=* Tv vsplit | wincmd l | terminal <args>
-" ctrl-d2回押してenterで今いる場所を閉じる
+nnoremap <silent> @@ :split \| wincmd j \| resize 10 \| terminal<CR>
+nnoremap <silent> @v :vsplit \| wincmd l \| terminal<CR>
+" ctrl-d2回+enterで今いる場所を閉じる
 nnoremap <c-d><c-d> :bd!
-" @@ で:T, @vで:Tv
-nnoremap <silent> @@ :T<CR>
-nnoremap <silent> @v :Tv<CR>
 " バッファ移動系
 nnoremap <silent> <C-j> :bprev<CR>
 nnoremap <silent> <C-k> :bnext<CR>
@@ -93,4 +92,5 @@ nnoremap <silent> <C-k> :bnext<CR>
 inoremap <c-c> <Esc>
 " インサートモードでctrl-sをセーブしてノーマルモードに
 inoremap <c-s> <Esc>:w<CR>
+
 
