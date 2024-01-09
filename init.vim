@@ -61,15 +61,6 @@ hi CocMenuSel guifg=#cccccc guibg=#2a3d75
 hi CocFloating guifg=#c29976 guibg=#001622
 
 let g:scrollview_excluded_filetypes = ['nerdtree']
-let g:scrollview_current_only = v:true
-" Position the scrollbar at the 80th character of the buffer
-" let g:scrollview_base = 'buffer'
-" Enable all sign groups (defaults to ['diagnostics', 'search']).
-" Set to the empty list to disable all sign groups.
-let g:scrollview_signs_on_startup = ['all']
-" Show diagnostic signs only for errors.
-let g:scrollview_diagnostics_severities =
-      \ [luaeval('vim.diagnostic.severity.ERROR')]
 
 
 let g:NERDTreeDirArrowExpandable="+"
