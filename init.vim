@@ -41,7 +41,7 @@ Plug 'https://github.com/kevinhwang91/nvim-hlslens'
 set encoding=UTF-8
 
 call plug#end()
-runtime lua/init.lua
+runtime lua/settings.lua
 
 " nnoremap <C-f> :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
